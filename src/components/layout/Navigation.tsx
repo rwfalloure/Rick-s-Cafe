@@ -21,7 +21,11 @@ export function Navigation() {
       {/* Desktop: Fixed top bar */}
       <header className="fixed top-0 left-0 right-0 z-50 hidden md:block backdrop-blur-sm bg-background/50">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-8 py-6">
-          <Link href="/" className="font-serif text-2xl font-bold tracking-tight">
+          <Link
+            href="/"
+            className="font-serif text-2xl tracking-tight"
+            style={{ fontStyle: "italic" }}
+          >
             Rick&apos;s Caf&eacute;
           </Link>
           <div className="flex items-center gap-8">
@@ -30,17 +34,18 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "relative text-sm uppercase tracking-widest transition-colors",
+                  "relative text-[11px] uppercase tracking-[0.2em] transition-colors",
                   pathname === item.href
                     ? "text-foreground"
                     : "text-foreground/40 hover:text-foreground/70"
                 )}
+                style={{ fontFamily: "var(--font-display-var)" }}
               >
                 {item.label}
                 {pathname === item.href && (
                   <motion.div
                     layoutId="nav-underline"
-                    className="absolute -bottom-1 left-0 right-0 h-px bg-foreground"
+                    className="absolute -bottom-1 left-0 right-0 h-px bg-accent"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -62,11 +67,14 @@ export function Navigation() {
                 href={item.href}
                 className={cn(
                   "flex flex-col items-center gap-1 px-4 py-2 transition-colors",
-                  isActive ? "text-foreground" : "text-foreground/30"
+                  isActive ? "text-accent" : "text-foreground/30"
                 )}
               >
                 <Icon size={20} strokeWidth={isActive ? 2 : 1.5} />
-                <span className="text-[10px] uppercase tracking-wider">
+                <span
+                  className="text-[10px] uppercase tracking-wider"
+                  style={{ fontFamily: "var(--font-display-var)" }}
+                >
                   {item.label}
                 </span>
               </Link>

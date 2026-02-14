@@ -12,7 +12,8 @@ interface Particle {
   alpha: number;
 }
 
-const COLORS = ["#e07a3a", "#d4a853", "#c44536", "#f0e6d3"];
+// Updated Houston-rooted warm palette
+const COLORS = ["#e8723a", "#c49a3c", "#b5332b", "#ede0cc", "#ff8c42", "#1a7a6d"];
 
 export function ParticleField({ count = 30 }: { count?: number }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -32,10 +33,8 @@ export function ParticleField({ count = 30 }: { count?: number }) {
     resize();
     window.addEventListener("resize", resize);
 
-    // Reduce particle count on mobile
     const actualCount = window.innerWidth < 768 ? Math.min(count, 12) : count;
 
-    // Init particles
     particlesRef.current = Array.from({ length: actualCount }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
@@ -43,7 +42,7 @@ export function ParticleField({ count = 30 }: { count?: number }) {
       vy: (Math.random() - 0.5) * 0.3 - 0.1,
       radius: Math.random() * 2 + 0.5,
       color: COLORS[Math.floor(Math.random() * COLORS.length)],
-      alpha: Math.random() * 0.4 + 0.1,
+      alpha: Math.random() * 0.35 + 0.05,
     }));
 
     const animate = () => {
@@ -53,7 +52,6 @@ export function ParticleField({ count = 30 }: { count?: number }) {
         p.x += p.vx;
         p.y += p.vy;
 
-        // Wrap around edges
         if (p.x < 0) p.x = canvas.width;
         if (p.x > canvas.width) p.x = 0;
         if (p.y < 0) p.y = canvas.height;

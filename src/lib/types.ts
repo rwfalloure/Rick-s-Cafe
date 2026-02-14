@@ -42,10 +42,12 @@ export interface TimelineRestaurant {
   slug: { current: string };
   cuisine: string;
   priceRange: string;
+  neighborhood?: string;
   heroImage: GalleryImage;
   overallScore: number;
   dateVisited: string;
   summary: string;
+  vibeColor?: string;
 }
 
 export interface SiteSettings {
