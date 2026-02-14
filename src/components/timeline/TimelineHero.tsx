@@ -54,12 +54,33 @@ export function TimelineHero() {
         }}
       />
 
+      {/* Bayou flowing line across the hero — subtle background motif */}
+      <svg
+        className="absolute inset-0 h-full w-full opacity-[0.04]"
+        viewBox="0 0 1000 600"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M -50,300 C 100,280 200,320 350,290 C 500,260 600,310 750,280 C 900,250 1000,290 1050,300"
+          fill="none"
+          stroke="var(--accent-gold)"
+          strokeWidth="2"
+        />
+        <path
+          d="M -50,340 C 150,320 250,360 400,330 C 550,300 650,350 800,320 C 950,290 1000,330 1050,340"
+          fill="none"
+          stroke="var(--accent)"
+          strokeWidth="1.5"
+        />
+      </svg>
+
       <motion.div
         className="relative z-10 text-center"
         style={{ y: titleY, opacity: titleOpacity }}
       >
         <motion.p
-          className="mb-6 text-xs uppercase tracking-[0.4em] text-accent-gold"
+          className="mb-6 text-xs uppercase tracking-[0.5em]"
+          style={{ color: "var(--accent-gold)", fontFamily: "var(--font-display-var)" }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -68,7 +89,8 @@ export function TimelineHero() {
         </motion.p>
 
         <motion.h1
-          className="font-serif text-[15vw] font-bold leading-[0.85] tracking-tight md:text-[12vw]"
+          className="font-serif text-[15vw] leading-[0.85] tracking-tight md:text-[12vw]"
+          style={{ fontStyle: "italic" }}
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
