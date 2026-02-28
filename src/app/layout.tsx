@@ -1,11 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garant, Inter, JetBrains_Mono } from "next/font/google";
+import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import { Navigation } from "@/components/layout/Navigation";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { CustomCursor } from "@/components/layout/CustomCursor";
 import "./globals.css";
 
-const heading = Cormorant_Garant({
+const heading = Playfair_Display({
   variable: "--font-heading-var",
   subsets: ["latin"],
   display: "swap",
