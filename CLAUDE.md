@@ -68,7 +68,7 @@ The full project manual lives in `context/PROJECT_MANUAL.md`. Read it before sta
 
 ## Repository
 
-- GitHub: https://github.com/jakebeinart1/Rick-s-Cafe.git
+- GitHub: https://github.com/rwfalloure/Rick-s-Cafe.git
 - Deploy target: Vercel
 
 ## Dev Setup
