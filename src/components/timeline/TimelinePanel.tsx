@@ -74,7 +74,7 @@ export function TimelinePanel({ restaurant, index, imageUrl }: Props) {
   return (
     <div
       ref={panelRef}
-      className="relative flex min-h-screen w-full flex-shrink-0 items-center px-4 md:h-screen md:w-[80vw] md:px-16"
+      className="relative flex min-h-screen w-full items-center px-4 md:px-16"
     >
       <div className="relative z-10 grid h-full w-full grid-cols-1 items-center gap-8 py-20 md:grid-cols-2 md:gap-16">
         {/* Image with clip-path reveal */}

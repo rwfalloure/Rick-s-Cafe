@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1c1638;          /* Warm Houston haze — humid purple-indigo sky at peak sunset */
-  --background-secondary: #1e1620; /* Slightly deeper for card and panel backgrounds */
+  --background: #141209;          /* Dark bamboo — dried stalk, warm charcoal earth */
+  --background-secondary: #1d1910; /* Slightly lighter warm brown, like bamboo in shadow */
   --foreground: #eedcbc;          /* Warm candlelight ivory — the color of a lit restaurant interior */
   --accent: #e8892a;              /* Sunset amber — the glow on the horizon */
   --accent-red: #c4532a;          /* Deeper burnt sienna — the richness just below the sun */
   --accent-gold: #c9a96e;         /* Bamboo gold — polished bamboo cane, warm natural material */
-  --accent-teal: #8c5fa8;         /* Dusk violet — the upper sky above the sunset band */
+  --accent-teal: #7a9e6b;         /* Bamboo green — living bamboo, muted forest tone */
   --muted: #8a7868;               /* Warm mid-tone — secondary text, like warm shadow */
 }
 

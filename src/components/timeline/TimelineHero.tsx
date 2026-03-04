@@ -29,14 +29,14 @@ export function TimelineHero() {
           className="h-full w-full"
           style={{
             background: `
-              radial-gradient(ellipse 220% 38% at 50% 87%, rgba(232,137,42,0.40) 0%, rgba(212,96,26,0.28) 28%, rgba(140,95,168,0.10) 58%, transparent 75%),
+              radial-gradient(ellipse 220% 38% at 50% 87%, rgba(232,137,42,0.40) 0%, rgba(212,96,26,0.28) 28%, rgba(140,80,20,0.10) 58%, transparent 75%),
               linear-gradient(
                 to bottom,
-                #1a2240 0%,
-                #1f1a3a 12%,
-                #2e1848 24%,
-                #4a1e40 36%,
-                #6b2a30 48%,
+                #0d1220 0%,
+                #0f1022 12%,
+                #180e0e 24%,
+                #3a1605 36%,
+                #5c2412 48%,
                 #8b3a20 58%,
                 #c4621a 68%,
                 #e8892a 76%,
@@ -115,7 +115,7 @@ export function TimelineHero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
         >
-          <span className="font-mono text-xs text-muted">scroll &rarr;</span>
+          <span className="font-mono text-xs text-muted">scroll ↓</span>
         </motion.div>
       </motion.div>
     </div>
