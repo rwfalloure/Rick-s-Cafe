@@ -119,32 +119,38 @@ export function TacosClient() {
         ref={heroRef}
         className="relative flex h-screen items-center justify-center overflow-hidden"
       >
-        {/* Smoky red → burnt amber → gold → bamboo gradient */}
+        {/* Smoky red → burnt orange → bright amber → gold → apricot cream */}
         <div
           className="absolute inset-0"
           style={{
-            background: `
-              radial-gradient(ellipse 200% 35% at 50% 90%, rgba(232,137,42,0.35) 0%, rgba(212,96,26,0.20) 40%, transparent 70%),
-              linear-gradient(
-                to bottom,
-                #2d0808 0%,
-                #4a1208 15%,
-                #7a2010 30%,
-                #c4521a 48%,
-                #e8892a 64%,
-                #d4a030 76%,
-                #c8b048 88%,
-                #edd988 97%,
-                #edd988 100%
-              )
-            `,
+            background: `linear-gradient(
+              to bottom,
+              #2d0808 0%,
+              #4a1208 12%,
+              #7a2010 28%,
+              #c4521a 46%,
+              #e8892a 62%,
+              #d4a030 74%,
+              #d4b060 85%,
+              #E8C587 96%,
+              #E8C587 100%
+            )`,
           }}
         />
-        {/* Fade into page background */}
+
+        {/* Dark scrim — deepens the bright amber zone so cream text is clearly readable */}
         <div
-          className="absolute inset-x-0 bottom-0 h-1/3"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            background: "linear-gradient(to top, var(--background), transparent)",
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.28) 45%, rgba(0,0,0,0.08) 68%, transparent 85%)",
+          }}
+        />
+        {/* Fade into apricot cream page */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-1/4"
+          style={{
+            background: "linear-gradient(to top, #E8C587, transparent)",
           }}
         />
 
@@ -154,7 +160,7 @@ export function TacosClient() {
         >
           <motion.p
             className="mb-6 font-mono text-xs uppercase tracking-[0.4em]"
-            style={{ color: "#c8a070" }}
+            style={{ color: "#eedcc8" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -169,14 +175,14 @@ export function TacosClient() {
             transition={{ delay: 0.5, duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
             <span className="block" style={{ color: "#f5e8d0" }}>Taco</span>
-            <span className="block text-accent">Run</span>
+            <span className="block" style={{ color: "#e8892a" }}>Run</span>
           </motion.h1>
 
-          <hr className="mx-auto mt-8 w-16" style={{ borderColor: "rgba(200,160,112,0.5)" }} />
+          <hr className="mx-auto mt-8 w-16" style={{ borderColor: "rgba(245,232,208,0.40)" }} />
 
           <motion.p
             className="mt-4 font-mono text-xs"
-            style={{ color: "#c8a070" }}
+            style={{ color: "#eedcc8" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
@@ -190,7 +196,7 @@ export function TacosClient() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
           >
-            <span className="font-mono text-xs" style={{ color: "#c8a070" }}>scroll ↓</span>
+            <span className="font-mono text-xs" style={{ color: "#eedcc8" }}>scroll ↓</span>
           </motion.div>
         </motion.div>
       </div>

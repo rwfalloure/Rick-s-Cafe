@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #edd988;          /* Bamboo yellow — warm golden straw, natural bamboo in daylight */
-  --background-secondary: #e4cd78; /* Slightly deeper bamboo gold for panels */
-  --foreground: #141e14;          /* Deep forest green — bamboo leaves, no brown at all */
-  --accent: #e8892a;              /* Sunset amber — the glow on the horizon */
-  --accent-red: #c4532a;          /* Deeper burnt sienna — richness just below the sun */
-  --accent-gold: #b07820;         /* Deep warm gold — visible and rich against bamboo yellow */
+  --background: #E8C587;          /* Apricot cream — exact color requested */
+  --background-secondary: #ddb870; /* Slightly richer for panels and cards */
+  --foreground: #1a2e18;          /* Deep forest green — high contrast on apricot, no brown */
+  --accent: #8b3208;              /* Deep burnt amber — readable on apricot (5:1 contrast) */
+  --accent-red: #c4532a;          /* Burnt sienna — from the hero gradient */
+  --accent-gold: #7a4e10;         /* Deep warm gold — visible on apricot cream */
   --accent-teal: #2a5a28;         /* Deep bamboo grove green */
-  --muted: #3a5830;               /* Medium forest green — secondary text on bamboo yellow */
+  --muted: #3a5830;               /* Medium forest green — secondary text on apricot */
 }
 
 @theme inline {
