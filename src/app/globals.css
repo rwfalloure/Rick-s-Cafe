@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #141209;          /* Dark bamboo — dried stalk, warm charcoal earth */
-  --background-secondary: #1d1910; /* Slightly lighter warm brown, like bamboo in shadow */
-  --foreground: #eedcbc;          /* Warm candlelight ivory — the color of a lit restaurant interior */
+  --background: #f4e8d0;          /* Bamboo beige — warm cream of natural bamboo stalks in daylight */
+  --background-secondary: #ece0c5; /* Slightly deeper cream for card and panel backgrounds */
+  --foreground: #1e1812;          /* Dark warm brown — rich, readable on bamboo cream */
   --accent: #e8892a;              /* Sunset amber — the glow on the horizon */
   --accent-red: #c4532a;          /* Deeper burnt sienna — the richness just below the sun */
-  --accent-gold: #c9a96e;         /* Bamboo gold — polished bamboo cane, warm natural material */
-  --accent-teal: #7a9e6b;         /* Bamboo green — living bamboo, muted forest tone */
-  --muted: #8a7868;               /* Warm mid-tone — secondary text, like warm shadow */
+  --accent-gold: #a07828;         /* Deep warm gold — polished bamboo, visible on light backgrounds */
+  --accent-teal: #4a7038;         /* Deep bamboo green — living bamboo, visible on cream */
+  --muted: #7a6850;               /* Warm medium brown — secondary text on bamboo cream */
 }
 
 @theme inline {
@@ -48,7 +48,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(238, 220, 188, 0.15);
+  background: rgba(100, 70, 30, 0.22);
   border-radius: 3px;
 }
 
