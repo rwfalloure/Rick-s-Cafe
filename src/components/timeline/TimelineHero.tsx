@@ -29,21 +29,18 @@ export function TimelineHero() {
           className="h-full w-full"
           style={{
             background: `
-              radial-gradient(ellipse 220% 38% at 50% 87%, rgba(232,137,42,0.40) 0%, rgba(212,96,26,0.28) 28%, rgba(140,80,20,0.10) 58%, transparent 75%),
+              radial-gradient(ellipse 200% 35% at 50% 90%, rgba(232,137,42,0.35) 0%, rgba(212,96,26,0.20) 40%, transparent 70%),
               linear-gradient(
                 to bottom,
-                #0d1220 0%,
-                #0f1022 12%,
-                #180e0e 24%,
-                #3a1605 36%,
-                #5c2412 48%,
-                #8b3a20 58%,
-                #c4621a 68%,
-                #e8892a 76%,
-                #d4a030 83%,
-                #8a5210 90%,
-                #1a1208 97%,
-                #0d0d08 100%
+                #2d0808 0%,
+                #4a1208 15%,
+                #7a2010 30%,
+                #c4521a 48%,
+                #e8892a 64%,
+                #d4a030 76%,
+                #c8b048 88%,
+                #edd988 97%,
+                #edd988 100%
               )
             `,
           }}
@@ -72,7 +69,8 @@ export function TimelineHero() {
         style={{ y: titleY, opacity: titleOpacity }}
       >
         <motion.p
-          className="mb-6 font-mono text-xs uppercase tracking-[0.4em] text-muted"
+          className="mb-6 font-mono text-xs uppercase tracking-[0.4em]"
+          style={{ color: "#c8a070" }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -90,16 +88,17 @@ export function TimelineHero() {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <span className="block text-foreground">Rick&apos;s</span>
-          <span className="block text-foreground">Caf&eacute;</span>
+          <span className="block" style={{ color: "#f5e8d0" }}>Rick&apos;s</span>
+          <span className="block" style={{ color: "#f5e8d0" }}>Caf&eacute;</span>
         </motion.h1>
 
-        <hr className="mx-auto mt-8 w-16 border-accent-gold/50" />
+        <hr className="mx-auto mt-8 w-16" style={{ borderColor: "rgba(200,160,112,0.5)" }} />
 
-        <p className="font-mono text-xs text-muted mt-4">Houston, TX — Est. 2018</p>
+        <p className="font-mono text-xs mt-4" style={{ color: "#c8a070" }}>Houston, TX — Est. 2018</p>
 
         <motion.p
-          className="mx-auto mt-8 max-w-sm text-sm leading-relaxed text-muted md:max-w-md"
+          className="mx-auto mt-8 max-w-sm text-sm leading-relaxed md:max-w-md"
+          style={{ color: "#c8a070" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.1 }}
@@ -108,14 +107,13 @@ export function TimelineHero() {
           every moment worth remembering.
         </motion.p>
 
-        {/* Horizontal scroll indicator */}
         <motion.div
           className="mt-16 flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
         >
-          <span className="font-mono text-xs text-muted">scroll ↓</span>
+          <span className="font-mono text-xs" style={{ color: "#c8a070" }}>scroll ↓</span>
         </motion.div>
       </motion.div>
     </div>

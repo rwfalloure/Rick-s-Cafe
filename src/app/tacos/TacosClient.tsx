@@ -119,26 +119,25 @@ export function TacosClient() {
         ref={heroRef}
         className="relative flex h-screen items-center justify-center overflow-hidden"
       >
-        {/* Dark earthy background */}
+        {/* Smoky red → burnt amber → gold → bamboo gradient */}
         <div
           className="absolute inset-0"
           style={{
-            background: `linear-gradient(
-              to bottom,
-              #0a0805 0%,
-              #140f08 25%,
-              #1c1508 55%,
-              #141209 80%,
-              #0d0c09 100%
-            )`,
-          }}
-        />
-        {/* Warm terra cotta glow at center */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 80% 50% at 50% 60%, rgba(196,83,42,0.14) 0%, transparent 70%)",
+            background: `
+              radial-gradient(ellipse 200% 35% at 50% 90%, rgba(232,137,42,0.35) 0%, rgba(212,96,26,0.20) 40%, transparent 70%),
+              linear-gradient(
+                to bottom,
+                #2d0808 0%,
+                #4a1208 15%,
+                #7a2010 30%,
+                #c4521a 48%,
+                #e8892a 64%,
+                #d4a030 76%,
+                #c8b048 88%,
+                #edd988 97%,
+                #edd988 100%
+              )
+            `,
           }}
         />
         {/* Fade into page background */}
@@ -154,7 +153,8 @@ export function TacosClient() {
           style={{ y: titleY, opacity: titleOpacity }}
         >
           <motion.p
-            className="mb-6 font-mono text-xs uppercase tracking-[0.4em] text-accent-gold"
+            className="mb-6 font-mono text-xs uppercase tracking-[0.4em]"
+            style={{ color: "#c8a070" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -168,14 +168,15 @@ export function TacosClient() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="block text-foreground">Taco</span>
+            <span className="block" style={{ color: "#f5e8d0" }}>Taco</span>
             <span className="block text-accent">Run</span>
           </motion.h1>
 
-          <hr className="mx-auto mt-8 w-16 border-accent-gold/50" />
+          <hr className="mx-auto mt-8 w-16" style={{ borderColor: "rgba(200,160,112,0.5)" }} />
 
           <motion.p
-            className="mt-4 font-mono text-xs text-muted"
+            className="mt-4 font-mono text-xs"
+            style={{ color: "#c8a070" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.9 }}
@@ -189,7 +190,7 @@ export function TacosClient() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
           >
-            <span className="font-mono text-xs text-muted">scroll ↓</span>
+            <span className="font-mono text-xs" style={{ color: "#c8a070" }}>scroll ↓</span>
           </motion.div>
         </motion.div>
       </div>
