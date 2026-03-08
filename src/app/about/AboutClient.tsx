@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PageTransition } from "@/components/layout/PageTransition";
+import { Leaderboard, type LeaderboardRow } from "@/components/common/Leaderboard";
+import { getRestaurantsByCategory } from "@/data/restaurants";
 import type { SiteSettings } from "@/lib/types";
 
 // Fallback content when Sanity is not connected
@@ -160,6 +162,43 @@ export function AboutClient({ settings }: Props) {
           ))}
         </div>
       </section>
+
+      {/* Live Houston Rankings */}
+      {(() => {
+        const houstonSpots = getRestaurantsByCategory("houston");
+        const sorted = [...houstonSpots].sort((a, b) => b.rating - a.rating);
+        const rows: LeaderboardRow[] = sorted.map((r, i) => ({
+          rank: i + 1,
+          name: r.name,
+          detail1: r.neighborhood,
+          detail2: r.cuisine,
+          score: r.rating,
+        }));
+        return (
+          <section className="mx-auto max-w-4xl px-6 py-24">
+            <RevealText>
+              <h2 className="font-heading text-3xl font-bold md:text-5xl mb-3">
+                Houston Rankings
+              </h2>
+              <p className="text-muted text-sm mb-10">
+                Sorted by score. Auto-updates when new reviews are added.
+              </p>
+            </RevealText>
+            <RevealText delay={0.2}>
+              <Leaderboard
+                rows={rows}
+                col1Label="Restaurant"
+                col2Label="Cuisine"
+                scoreLabel="Rating"
+              />
+            </RevealText>
+          </section>
+        );
+      })()}
+
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="h-px bg-foreground/10" />
+      </div>
 
       {/* Closing */}
       <section className="py-32 text-center">

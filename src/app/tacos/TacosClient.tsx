@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PageTransition } from "@/components/layout/PageTransition";
+import { Leaderboard, type LeaderboardRow } from "@/components/common/Leaderboard";
+import { getRestaurantsByCategory } from "@/data/restaurants";
 
 // — Data ——————————————————————————————————————————————————————
 
@@ -199,6 +201,48 @@ export function TacosClient() {
             <span className="font-mono text-xs" style={{ color: "#eedcc8" }}>scroll ↓</span>
           </motion.div>
         </motion.div>
+      </div>
+
+      {/* ── Top Taco Leaderboard ──────────────────────────── */}
+      {(() => {
+        const tacoSpots = getRestaurantsByCategory("taco");
+        const sorted = [...tacoSpots].sort((a, b) => (b.tacoScore ?? b.rating) - (a.tacoScore ?? a.rating));
+        const rows: LeaderboardRow[] = sorted.map((r, i) => ({
+          rank: i + 1,
+          name: r.name,
+          detail1: r.neighborhood ?? r.city,
+          detail2: r.tacoName ?? "—",
+          score: r.tacoScore ?? r.rating,
+        }));
+        return (
+          <section className="mx-auto max-w-4xl px-6 py-24">
+            <RevealText>
+              <div className="flex items-center gap-3 flex-wrap mb-2">
+                <h2 className="font-heading text-3xl font-bold md:text-5xl">
+                  Taco Leaderboard
+                </h2>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-accent border border-accent/40 px-2 py-1 rounded-sm">
+                  Live
+                </span>
+              </div>
+              <p className="text-muted text-sm mt-2 mb-10">
+                Ranked by Barbacoa score. Updated after every run.
+              </p>
+            </RevealText>
+            <RevealText delay={0.2}>
+              <Leaderboard
+                rows={rows}
+                col1Label="Taco Spot"
+                col2Label="Signature Taco"
+                scoreLabel="Barbacoa"
+              />
+            </RevealText>
+          </section>
+        );
+      })()}
+
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="h-px bg-foreground/10" />
       </div>
 
       {/* ── Mission ──────────────────────────────────────── */}

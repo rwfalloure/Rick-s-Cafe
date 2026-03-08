@@ -3,18 +3,20 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Clock, Utensils, User } from "lucide-react";
+import { Home, MapPin, Utensils, Globe, Camera, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/#timeline", label: "Timeline", icon: Clock },
+  { href: "/houston", label: "Houston", icon: MapPin },
   { href: "/tacos", label: "Tacos", icon: Utensils },
+  { href: "/travel", label: "Travel", icon: Globe },
+  { href: "/gallery", label: "Gallery", icon: Camera },
   { href: "/about", label: "About", icon: User },
 ];
 
 // Pages that open with a dark hero gradient behind the nav bar
-const DARK_HERO_PAGES = ["/", "/tacos"];
+const DARK_HERO_PAGES = ["/", "/tacos", "/houston", "/travel"];
 
 export function Navigation() {
   const pathname = usePathname();
