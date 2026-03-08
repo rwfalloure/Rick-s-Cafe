@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export function TimelineHero() {
@@ -18,44 +19,25 @@ export function TimelineHero() {
     <div
       ref={ref}
       className="relative flex h-screen items-center justify-center overflow-hidden"
-      style={{ background: "#2d0808" }}
+      style={{ background: "#0a0a0a" }}
     >
-      {/* Smoky red → burnt orange → bright amber → gold → apricot cream */}
+      {/* Mountain restaurant view — parallax zoom on scroll */}
       <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
-        <div
-          className="h-full w-full"
-          style={{
-            background: `linear-gradient(
-              to bottom,
-              #2d0808 0%,
-              #4a1208 12%,
-              #7a2010 28%,
-              #c4521a 46%,
-              #e8892a 62%,
-              #d4a030 74%,
-              #d4b060 85%,
-              #E8C587 96%,
-              #E8C587 100%
-            )`,
-          }}
+        <Image
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=85"
+          alt="Dramatic mountain vista — the view from the table"
+          fill
+          className="object-cover"
+          priority
         />
       </motion.div>
 
-      {/* Dark scrim — deepens the bright amber zone so cream text is clearly readable */}
+      {/* Dark scrim — keeps all text legible against the photo */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.28) 45%, rgba(0,0,0,0.08) 68%, transparent 85%)",
-        }}
-      />
-
-      {/* Warm glow at the horizon */}
-      <div
-        className="absolute inset-x-0 bottom-0 h-2/3 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 85% 35% at 50% 100%, rgba(232,137,42,0.12) 0%, transparent 65%)",
+            "linear-gradient(to bottom, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.52) 50%, rgba(0,0,0,0.30) 75%, transparent 90%)",
         }}
       />
 

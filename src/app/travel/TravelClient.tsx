@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PageTransition } from "@/components/layout/PageTransition";
@@ -54,30 +55,23 @@ export function TravelClient() {
       <div
         ref={heroRef}
         className="relative flex h-screen items-center justify-center overflow-hidden"
+        style={{ background: "#0a0a0a" }}
       >
-        {/* Deep navy → midnight blue → warm gold → apricot cream */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(
-              to bottom,
-              #050a1a 0%,
-              #0a1840 15%,
-              #0d2060 32%,
-              #1a3880 48%,
-              #c4a028 66%,
-              #d4b048 78%,
-              #ddc068 88%,
-              #E8C587 96%,
-              #E8C587 100%
-            )`,
-          }}
-        />
+        {/* Iconic travel destination — Santorini, Greece */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1920&q=85"
+            alt="Iconic Santorini cliffside view at golden hour"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.40) 0%, rgba(0,0,0,0.22) 50%, rgba(0,0,0,0.06) 72%, transparent 88%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.48) 50%, rgba(0,0,0,0.25) 75%, transparent 90%)",
           }}
         />
         <div

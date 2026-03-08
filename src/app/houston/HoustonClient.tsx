@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, useMemo } from "react";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PageTransition } from "@/components/layout/PageTransition";
@@ -71,30 +72,23 @@ export function HoustonClient() {
       <div
         ref={heroRef}
         className="relative flex h-screen items-center justify-center overflow-hidden"
+        style={{ background: "#0a0a0a" }}
       >
-        {/* Forest green → teal → gold → apricot cream gradient */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(
-              to bottom,
-              #0a1f0a 0%,
-              #1a3d1a 14%,
-              #1a5c3c 30%,
-              #2a8060 48%,
-              #c4a430 65%,
-              #d4b050 78%,
-              #ddc070 88%,
-              #E8C587 96%,
-              #E8C587 100%
-            )`,
-          }}
-        />
+        {/* Houston skyline at dusk */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?auto=format&fit=crop&w=1920&q=85"
+            alt="Houston skyline at dusk"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.20) 50%, rgba(0,0,0,0.05) 72%, transparent 88%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.48) 50%, rgba(0,0,0,0.25) 75%, transparent 90%)",
           }}
         />
         <div

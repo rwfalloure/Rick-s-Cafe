@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { Leaderboard, type LeaderboardRow } from "@/components/common/Leaderboard";
@@ -120,32 +121,25 @@ export function TacosClient() {
       <div
         ref={heroRef}
         className="relative flex h-screen items-center justify-center overflow-hidden"
+        style={{ background: "#0a0a0a" }}
       >
-        {/* Smoky red → burnt orange → bright amber → gold → apricot cream */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(
-              to bottom,
-              #2d0808 0%,
-              #4a1208 12%,
-              #7a2010 28%,
-              #c4521a 46%,
-              #e8892a 62%,
-              #d4a030 74%,
-              #d4b060 85%,
-              #E8C587 96%,
-              #E8C587 100%
-            )`,
-          }}
-        />
+        {/* Taco truck parked in a scenic outdoor setting */}
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=1920&q=85"
+            alt="Taco truck in a scenic outdoor setting"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
 
-        {/* Dark scrim — deepens the bright amber zone so cream text is clearly readable */}
+        {/* Dark scrim — keeps all text legible against the photo */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0.28) 45%, rgba(0,0,0,0.08) 68%, transparent 85%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.28) 75%, transparent 90%)",
           }}
         />
         {/* Fade into apricot cream page */}
