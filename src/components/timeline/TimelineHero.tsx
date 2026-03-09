@@ -21,11 +21,11 @@ export function TimelineHero() {
       className="relative flex h-screen items-center justify-center overflow-hidden"
       style={{ background: "#0a0a0a" }}
     >
-      {/* Mountain restaurant view — parallax zoom on scroll */}
+      {/* POV from restaurant outdoor seating — mountain view, parallax zoom on scroll */}
       <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
         <Image
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=85"
-          alt="Dramatic mountain vista — the view from the table"
+          src="https://images.unsplash.com/photo-LU7ovETGdzA?auto=format&fit=crop&w=1920&q=85"
+          alt="View from restaurant outdoor seating high in the mountains"
           fill
           className="object-cover"
           priority

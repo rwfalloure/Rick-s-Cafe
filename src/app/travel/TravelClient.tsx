@@ -57,11 +57,11 @@ export function TravelClient() {
         className="relative flex h-screen items-center justify-center overflow-hidden"
         style={{ background: "#0a0a0a" }}
       >
-        {/* Iconic travel destination — Santorini, Greece */}
+        {/* Taormina, Sicily */}
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=1920&q=85"
-            alt="Iconic Santorini cliffside view at golden hour"
+            src="https://cdn2.wanderlust.co.uk/media/1001/dreamstime_m_79380472.jpg?anchor=center&mode=crop&width=1600&height=0&format=auto&quality=90&rnd=132048027750000000"
+            alt="Taormina, Sicily — hilltop town overlooking the sea"
             fill
             className="object-cover"
             priority
