@@ -77,7 +77,7 @@ export function HoustonClient() {
         {/* Houston skyline — orange and blue */}
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1GQoJGCoRTw?auto=format&fit=crop&w=1920&q=85"
+            src="https://images.unsplash.com/photo-1666610278692-51058ed05e9a?auto=format&fit=crop&w=1920&q=85"
             alt="Houston skyline in orange and blue"
             fill
             className="object-cover"

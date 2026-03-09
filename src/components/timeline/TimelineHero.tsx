@@ -24,7 +24,7 @@ export function TimelineHero() {
       {/* POV from restaurant outdoor seating — mountain view, parallax zoom on scroll */}
       <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
         <Image
-          src="https://images.unsplash.com/photo-LU7ovETGdzA?auto=format&fit=crop&w=1920&q=85"
+          src="https://images.unsplash.com/photo-1743465832946-275c446c94be?auto=format&fit=crop&w=1920&q=85"
           alt="View from restaurant outdoor seating high in the mountains"
           fill
           className="object-cover"
