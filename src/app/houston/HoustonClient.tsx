@@ -74,11 +74,11 @@ export function HoustonClient() {
         className="relative flex h-screen items-center justify-center overflow-hidden"
         style={{ background: "#0a0a0a" }}
       >
-        {/* Houston skyline at dusk */}
+        {/* Houston skyline — orange and blue */}
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1551703599-6b3e8379aa8c?auto=format&fit=crop&w=1920&q=85"
-            alt="Houston skyline at dusk"
+            src="https://images.unsplash.com/photo-1GQoJGCoRTw?auto=format&fit=crop&w=1920&q=85"
+            alt="Houston skyline in orange and blue"
             fill
             className="object-cover"
             priority
