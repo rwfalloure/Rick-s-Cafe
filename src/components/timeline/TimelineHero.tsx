@@ -21,11 +21,11 @@ export function TimelineHero() {
       className="relative flex h-screen items-center justify-center overflow-hidden"
       style={{ background: "#0a0a0a" }}
     >
-      {/* POV from restaurant outdoor seating — mountain view, parallax zoom on scroll */}
+      {/* Restaurant interior at Hotel Das Central — mountain dining atmosphere */}
       <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
         <Image
-          src="https://images.unsplash.com/photo-1743465832946-275c446c94be?auto=format&fit=crop&w=1920&q=85"
-          alt="View from restaurant outdoor seating high in the mountains"
+          src="https://falstaff.b-cdn.net/storage/2023/08/1500-x800-iceq_innenaufnahme_hotel_das_central_by_rudi_wyhlidal.jpg?width=1200&aspect_ratio=40:21&crop_gravity=north"
+          alt="Elegant restaurant interior with mountain atmosphere"
           fill
           className="object-cover"
           priority
