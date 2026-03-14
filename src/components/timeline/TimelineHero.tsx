@@ -24,10 +24,10 @@ export function TimelineHero() {
       {/* Restaurant interior at Hotel Das Central — mountain dining atmosphere */}
       <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
         <Image
-          src="https://falstaff.b-cdn.net/storage/2023/08/1500-x800-iceq_innenaufnahme_hotel_das_central_by_rudi_wyhlidal.jpg?width=1200&aspect_ratio=40:21&crop_gravity=north"
+          src="https://falstaff.b-cdn.net/storage/2023/08/1500-x800-iceq_innenaufnahme_hotel_das_central_by_rudi_wyhlidal.jpg?width=1920&aspect_ratio=40:21&crop_gravity=center"
           alt="Elegant restaurant interior with mountain atmosphere"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
       </motion.div>
