@@ -28,7 +28,7 @@ export function TimelineHero() {
           alt="Elegant restaurant interior with mountain atmosphere"
           fill
           className="object-cover"
-          style={{ objectPosition: "60% center" }}
+          style={{ objectPosition: "75% center" }}
           priority
         />
       </motion.div>
