@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export function TimelineHero() {
@@ -22,16 +21,16 @@ export function TimelineHero() {
       style={{ background: "#0a0a0a" }}
     >
       {/* Restaurant interior at Hotel Das Central — mountain dining atmosphere */}
-      <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
-        <Image
-          src="https://falstaff.b-cdn.net/storage/2023/08/1500-x800-iceq_innenaufnahme_hotel_das_central_by_rudi_wyhlidal.jpg?width=1920&aspect_ratio=40:21&crop_gravity=center"
-          alt="Elegant restaurant interior with mountain atmosphere"
-          fill
-          className="object-cover"
-          style={{ objectPosition: "75% center" }}
-          priority
-        />
-      </motion.div>
+      <motion.div
+        className="absolute inset-0"
+        style={{
+          scale: bgScale,
+          backgroundImage: `url('https://falstaff.b-cdn.net/storage/2023/08/1500-x800-iceq_innenaufnahme_hotel_das_central_by_rudi_wyhlidal.jpg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "75% center",
+          backgroundRepeat: "no-repeat",
+        }}
+      />
 
       {/* Dark scrim — keeps all text legible against the photo */}
       <div
