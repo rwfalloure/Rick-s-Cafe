@@ -21,14 +21,19 @@ export function TimelineHero() {
       style={{ background: "#0a0a0a" }}
     >
       {/* Restaurant interior at Hotel Das Central — mountain dining atmosphere */}
-      <motion.div className="absolute inset-0" style={{ scale: bgScale }}>
-        <div
-          className="absolute inset-0"
+      <motion.div className="absolute inset-0 overflow-hidden" style={{ scale: bgScale }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://falstaff.b-cdn.net/storage/2023/08/1500-x800-iceq_innenaufnahme_hotel_das_central_by_rudi_wyhlidal.jpg"
+          alt=""
+          aria-hidden="true"
           style={{
-            backgroundImage: `url('https://falstaff.b-cdn.net/storage/2023/08/1500-x800-iceq_innenaufnahme_hotel_das_central_by_rudi_wyhlidal.jpg')`,
-            backgroundSize: "cover",
-            backgroundPosition: "90% center",
-            backgroundRepeat: "no-repeat",
+            position: "absolute",
+            height: "110%",
+            width: "auto",
+            top: "-5%",
+            left: "50%",
+            transform: "translateX(-60%)",
           }}
         />
       </motion.div>
