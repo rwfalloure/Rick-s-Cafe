@@ -27,7 +27,7 @@ export function TimelineHero() {
           scale: bgScale,
           backgroundImage: `url('https://falstaff.b-cdn.net/storage/2023/08/1500-x800-iceq_innenaufnahme_hotel_das_central_by_rudi_wyhlidal.jpg')`,
           backgroundSize: "cover",
-          backgroundPosition: "75% center",
+          backgroundPosition: "90% center",
           backgroundRepeat: "no-repeat",
         }}
       />
