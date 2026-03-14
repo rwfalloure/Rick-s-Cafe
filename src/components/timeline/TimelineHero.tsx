@@ -27,7 +27,8 @@ export function TimelineHero() {
           src="https://falstaff.b-cdn.net/storage/2023/08/1500-x800-iceq_innenaufnahme_hotel_das_central_by_rudi_wyhlidal.jpg?width=1920&aspect_ratio=40:21&crop_gravity=center"
           alt="Elegant restaurant interior with mountain atmosphere"
           fill
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: "60% center" }}
           priority
         />
       </motion.div>
