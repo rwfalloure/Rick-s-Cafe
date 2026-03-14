@@ -29,7 +29,7 @@ export function MasonryGallery({ photos, onPhotoClick }: Props) {
           />
           {/* Caption overlay on hover */}
           <div className="absolute inset-0 bg-[#1a2e18]/0 group-hover:bg-[#1a2e18]/65 transition-all duration-300 flex items-end">
-            <p className="p-4 text-[#E8C587] text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-snug">
+            <p className="p-4 text-[#F6E7CB] text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 leading-snug">
               {photo.caption ?? photo.alt}
             </p>
           </div>

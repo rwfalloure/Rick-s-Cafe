@@ -44,7 +44,7 @@ export function Navigation() {
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 hidden md:block backdrop-blur-sm transition-colors duration-500",
-          lightText ? "bg-transparent" : "bg-[#E8C587]/85"
+          lightText ? "bg-transparent" : "bg-[#F6E7CB]/85"
         )}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-8 py-6">

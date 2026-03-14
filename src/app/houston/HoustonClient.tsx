@@ -93,7 +93,7 @@ export function HoustonClient() {
         />
         <div
           className="absolute inset-x-0 bottom-0 h-1/4"
-          style={{ background: "linear-gradient(to top, #E8C587, transparent)" }}
+          style={{ background: "linear-gradient(to top, #F6E7CB, transparent)" }}
         />
 
         <motion.div

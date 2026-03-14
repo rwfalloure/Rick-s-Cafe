@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #E8C587;          /* Apricot cream — exact color requested */
-  --background-secondary: #ddb870; /* Slightly richer for panels and cards */
+  --background: #F6E7CB;          /* Champagne Mist */
+  --background-secondary: #E8CFAA; /* Slightly richer for panels and cards */
   --foreground: #1a2e18;          /* Deep forest green — high contrast on apricot, no brown */
   --accent: #8b3208;              /* Deep burnt amber — readable on apricot (5:1 contrast) */
   --accent-red: #c4532a;          /* Burnt sienna — from the hero gradient */

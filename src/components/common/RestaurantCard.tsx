@@ -26,7 +26,7 @@ export function RestaurantCard({ restaurant, index = 0 }: Props) {
         />
         {/* Rating badge */}
         <div className="absolute top-3 right-3 bg-[#1a2e18]/85 backdrop-blur-sm px-2.5 py-1 rounded-sm">
-          <span className="font-mono text-sm font-bold text-[#E8C587]">
+          <span className="font-mono text-sm font-bold text-[#F6E7CB]">
             {restaurant.rating.toFixed(1)}
           </span>
         </div>

@@ -44,7 +44,7 @@ export function Lightbox({ photos, currentIndex, onClose, onNext, onPrev }: Prop
     >
       {/* Close */}
       <button
-        className="absolute top-5 right-5 text-[#E8C587]/60 hover:text-[#E8C587] transition-colors z-10"
+        className="absolute top-5 right-5 text-[#F6E7CB]/60 hover:text-[#F6E7CB] transition-colors z-10"
         onClick={onClose}
         aria-label="Close lightbox"
       >
@@ -52,13 +52,13 @@ export function Lightbox({ photos, currentIndex, onClose, onNext, onPrev }: Prop
       </button>
 
       {/* Counter */}
-      <div className="absolute top-5 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-widest text-[#E8C587]/40">
+      <div className="absolute top-5 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-widest text-[#F6E7CB]/40">
         {currentIndex + 1} / {photos.length}
       </div>
 
       {/* Prev */}
       <button
-        className="absolute left-3 md:left-6 text-[#E8C587]/50 hover:text-[#E8C587] transition-colors z-10 p-3"
+        className="absolute left-3 md:left-6 text-[#F6E7CB]/50 hover:text-[#F6E7CB] transition-colors z-10 p-3"
         onClick={(e) => {
           e.stopPropagation();
           onPrev();
@@ -85,7 +85,7 @@ export function Lightbox({ photos, currentIndex, onClose, onNext, onPrev }: Prop
             className="max-h-[75vh] max-w-full w-auto object-contain rounded-sm"
           />
           {photo.caption && (
-            <p className="mt-5 text-center text-sm text-[#E8C587]/70 max-w-xl">
+            <p className="mt-5 text-center text-sm text-[#F6E7CB]/70 max-w-xl">
               {photo.caption}
             </p>
           )}
@@ -94,7 +94,7 @@ export function Lightbox({ photos, currentIndex, onClose, onNext, onPrev }: Prop
 
       {/* Next */}
       <button
-        className="absolute right-3 md:right-6 text-[#E8C587]/50 hover:text-[#E8C587] transition-colors z-10 p-3"
+        className="absolute right-3 md:right-6 text-[#F6E7CB]/50 hover:text-[#F6E7CB] transition-colors z-10 p-3"
         onClick={(e) => {
           e.stopPropagation();
           onNext();
