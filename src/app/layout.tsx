@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 import { Navigation } from "@/components/layout/Navigation";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
-import { CustomCursor } from "@/components/layout/CustomCursor";
 import "./globals.css";
 
 const heading = Playfair_Display({
@@ -47,7 +46,6 @@ export default function RootLayout({
     <html lang="en" className={`${heading.variable} ${sans.variable} ${mono.variable}`}>
       <body className="antialiased">
         <SmoothScroll>
-          <CustomCursor />
           <Navigation />
           <main className="min-h-screen pb-20 md:pb-0 md:pt-0">
             {children}
