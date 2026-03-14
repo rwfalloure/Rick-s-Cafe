@@ -123,11 +123,11 @@ export function TacosClient() {
         className="relative flex h-screen items-center justify-center overflow-hidden"
         style={{ background: "#0a0a0a" }}
       >
-        {/* Taco truck parked in a scenic outdoor setting */}
+        {/* Birria tacos on a black plate */}
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&fit=crop&w=1920&q=85"
-            alt="Taco truck in a scenic outdoor setting"
+            src="https://media.istockphoto.com/id/2021971495/photo/3-beef-birria-tacos-stacked-on-black-plate.jpg?b=1&s=1024x1024&w=0&k=20&c=dJHAeD_zYj9PqYJgHLOfxMARw4HHfeSL0VyA_PzcCkM="
+            alt="Three beef birria tacos stacked on a black plate"
             fill
             className="object-cover"
             priority
