@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { PageTransition } from "@/components/layout/PageTransition";
 import { Leaderboard, type LeaderboardRow } from "@/components/common/Leaderboard";
-import { getRestaurantsByCategory } from "@/data/restaurants";
 
 // — Data ——————————————————————————————————————————————————————
 
@@ -295,14 +294,17 @@ export function TacosClient() {
 
       {/* ── Top Taco Leaderboard ──────────────────────────── */}
       {(() => {
-        const tacoSpots = getRestaurantsByCategory("taco");
-        const sorted = [...tacoSpots].sort((a, b) => (b.tacoScore ?? b.rating) - (a.tacoScore ?? a.rating));
+        const sorted = [...TACO_SPOTS].sort((a, b) => {
+          const aBarb = a.tacos.find((t) => t.isBenchmark)?.score ?? 0;
+          const bBarb = b.tacos.find((t) => t.isBenchmark)?.score ?? 0;
+          return bBarb - aBarb;
+        });
         const rows: LeaderboardRow[] = sorted.map((r, i) => ({
           rank: i + 1,
           name: r.name,
-          detail1: r.neighborhood ?? r.city,
-          detail2: r.tacoName ?? "—",
-          score: r.tacoScore ?? r.rating,
+          detail1: r.neighborhood,
+          detail2: r.tacos.find((t) => t.isBenchmark)?.name ?? "Barbacoa",
+          score: r.tacos.find((t) => t.isBenchmark)?.score ?? 0,
         }));
         return (
           <section className="mx-auto max-w-4xl px-6 py-24">
