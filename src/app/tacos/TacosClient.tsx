@@ -17,7 +17,7 @@ const TACO_SPOTS = [
     visited: "2025",
     pricePerTaco: "$5–6",
     vibeScore: 9.5,
-    overallScore: 8.5,
+    overallScore: 8.6,
     tacoSize: "Standard street taco size",
     description:
       "Cantina Barba easily wins best vibe out of the places tried. The interior is very small — classic taco shop energy, this is where you order. There's also a small patio with string lights in the shape of chili peppers. At night it's very dark, but that only adds to the ambience. The only way to describe it: Halloween vibes, in the best way possible.",
@@ -101,7 +101,7 @@ const TACO_SPOTS = [
     visited: "2025",
     pricePerTaco: "$2–3",
     vibeScore: 7.5,
-    overallScore: 8.8,
+    overallScore: 8.4,
     tacoSize: "Standard street taco size",
     description:
       "El Mapache is a food truck you'll only find out about by word of mouth. Found in a parking lot just outside Bellaire, it was a unique find. Their specialty is the tripa and the pastor — and both lived up to the reputation. Service was a little slow compared to the other spots we visited, but once the tacos arrived, all was forgiven.",
@@ -147,15 +147,15 @@ const LIVE_RANKINGS = [
   },
   {
     rank: 2,
-    spot: "El Mapache",
-    score: 8.8,
-    notes: "Best pastor of any run — the pineapple pop is real",
+    spot: "Cantina Barba",
+    score: 8.6,
+    notes: "Best vibe of any spot — the Barbacoa is untouchable",
   },
   {
     rank: 3,
-    spot: "Cantina Barba",
-    score: 8.5,
-    notes: "Best vibe of any spot — the Barbacoa is untouchable",
+    spot: "El Mapache",
+    score: 8.4,
+    notes: "Best pastor of any run — the pineapple pop is real",
   },
 ];
 
