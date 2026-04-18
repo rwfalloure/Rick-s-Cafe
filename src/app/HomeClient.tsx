@@ -57,87 +57,31 @@ function FeaturedSection({
 const mockRestaurants: TimelineRestaurant[] = [
   {
     _id: "houston-1",
-    name: "Truth BBQ",
-    slug: { current: "truth-bbq" },
-    cuisine: "Texas BBQ",
+    name: "Tiny Boxwoods",
+    slug: { current: "tiny-boxwoods" },
+    cuisine: "Café / Brunch",
     priceRange: "$$",
-    neighborhood: "Heights",
+    neighborhood: "River Oaks",
     heroImage: null as any,
-    overallScore: 9.4,
-    dateVisited: "2025-12-15",
+    overallScore: 8.1,
+    dateVisited: "2026-02-14",
     summary:
-      "Brisket so tender it surrenders on contact. The burnt ends are obsidian jewels of smoky perfection. Worth every minute in line.",
-    vibeColor: "#b5332b",
+      "A River Oaks gem with a courtyard straight out of a storybook. The atmosphere alone earns its reputation — the food is solid, the sangria is a must, and the lox on the avocado toast had one bad day.",
+    vibeColor: "#7a9e7e",
   },
   {
     _id: "houston-2",
-    name: "Xochi",
-    slug: { current: "xochi" },
-    cuisine: "Oaxacan Mexican",
-    priceRange: "$$$",
-    neighborhood: "Downtown",
-    heroImage: null as any,
-    overallScore: 9.1,
-    dateVisited: "2025-11-28",
-    summary:
-      "Mole negro that tastes like it took a village to make. The chocolate tamale dessert is an emotional experience disguised as food.",
-    vibeColor: "#6b3a5d",
-  },
-  {
-    _id: "houston-3",
-    name: "Crawfish & Noodles",
-    slug: { current: "crawfish-and-noodles" },
-    cuisine: "Viet-Cajun",
+    name: "BB's Tex-Orleans",
+    slug: { current: "bbs-tex-orleans" },
+    cuisine: "Cajun-Texas",
     priceRange: "$$",
-    neighborhood: "Asiatown",
+    neighborhood: "Heights",
     heroImage: null as any,
-    overallScore: 8.8,
-    dateVisited: "2025-10-10",
+    overallScore: 8.4,
+    dateVisited: "2026-02-20",
     summary:
-      "Where garlic butter meets lemongrass in a muddy, beautiful marriage. Houston in a single bite. Plastic bibs mandatory.",
-    vibeColor: "#1a7a6d",
-  },
-  {
-    _id: "houston-4",
-    name: "March",
-    slug: { current: "march" },
-    cuisine: "Contemporary American",
-    priceRange: "$$$$",
-    neighborhood: "Montrose",
-    heroImage: null as any,
-    overallScore: 9.3,
-    dateVisited: "2025-09-05",
-    summary:
-      "A tasting menu that reads like poetry and tastes like a fever dream. Every course is a thesis statement on Houston's diversity.",
-    vibeColor: "#c49a3c",
-  },
-  {
-    _id: "houston-5",
-    name: "Himalaya",
-    slug: { current: "himalaya" },
-    cuisine: "Pakistani-Indian",
-    priceRange: "$$",
-    neighborhood: "Hillcroft",
-    heroImage: null as any,
-    overallScore: 9.0,
-    dateVisited: "2025-08-22",
-    summary:
-      "The fried goat is legendary for a reason. Biryani that could broker peace treaties. A strip-mall cathedral of spice.",
-    vibeColor: "#e8723a",
-  },
-  {
-    _id: "houston-6",
-    name: "Le Jardinier",
-    slug: { current: "le-jardinier" },
-    cuisine: "French Vegetable-Forward",
-    priceRange: "$$$$",
-    neighborhood: "Uptown",
-    heroImage: null as any,
-    overallScore: 8.6,
-    dateVisited: "2025-07-14",
-    summary:
-      "Proof that vegetables can be the main character. Every plate is a still life that happens to be edible. The wine list whispers to you.",
-    vibeColor: "#2d6b5e",
+      "Where New Orleans meets Texas and neither one backs down. The Tex-Orleans crawfish is one of the most unique spice profiles in the city — messy, bold, and completely worth it.",
+    vibeColor: "#c45c2a",
   },
 ];
 
@@ -163,34 +107,6 @@ export function HomeClient({ restaurants }: Props) {
         seeAllHref="/houston"
       >
         {getTopByCategory("houston", 3).map((r, i) => (
-          <RestaurantCard key={r.id} restaurant={r} index={i} />
-        ))}
-      </FeaturedSection>
-
-      {/* ── Featured Taco Reviews ─────────────────────────── */}
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="h-px bg-foreground/10" />
-      </div>
-      <FeaturedSection
-        title="Taco Run"
-        subtitle="One city, one mission, one benchmark taco at every stop."
-        seeAllHref="/tacos"
-      >
-        {getTopByCategory("taco", 3).map((r, i) => (
-          <RestaurantCard key={r.id} restaurant={r} index={i} />
-        ))}
-      </FeaturedSection>
-
-      {/* ── Featured Travel Reviews ───────────────────────── */}
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="h-px bg-foreground/10" />
-      </div>
-      <FeaturedSection
-        title="Travel Eats"
-        subtitle="The restaurants worth boarding a plane for."
-        seeAllHref="/travel"
-      >
-        {getTopByCategory("travel", 3).map((r, i) => (
           <RestaurantCard key={r.id} restaurant={r} index={i} />
         ))}
       </FeaturedSection>
