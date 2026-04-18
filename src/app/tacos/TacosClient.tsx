@@ -141,21 +141,21 @@ const TACO_SPOTS = [
 const LIVE_RANKINGS = [
   {
     rank: 1,
-    spot: "Cantina Barba",
-    score: 9.5,
-    notes: "Sweet, tangy, smoky — a flavor that pops",
+    spot: "El Taconazo",
+    score: 9.1,
+    notes: "The most consistent spot across all meats — a north Houston hidden gem",
   },
   {
     rank: 2,
-    spot: "El Taconazo",
-    score: 9.2,
-    notes: "Subtle, fresh, and deeply flavorful — just a touch behind the best",
+    spot: "El Mapache",
+    score: 8.8,
+    notes: "Best pastor of any run — the pineapple pop is real",
   },
   {
     rank: 3,
-    spot: "El Mapache",
-    score: 8.1,
-    notes: "Solid Barbacoa, but come here for the pastor and tripa",
+    spot: "Cantina Barba",
+    score: 8.5,
+    notes: "Best vibe of any spot — the Barbacoa is untouchable",
   },
 ];
 
@@ -490,7 +490,7 @@ export function TacosClient() {
             </span>
           </div>
           <p className="text-muted text-sm mt-2">
-            Ranked by Barbacoa score. Updated as we eat.
+            Ranked by overall restaurant score. Updated as we eat.
           </p>
         </RevealText>
 
