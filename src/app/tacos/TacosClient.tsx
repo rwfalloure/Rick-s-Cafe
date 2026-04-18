@@ -38,17 +38,101 @@ const TACO_SPOTS = [
       },
       {
         name: "Carne Asada",
-        score: 7.0,
+        score: 7.2,
         isBenchmark: false,
         notes:
           "Solid. Small cubes, well cooked, great meat quality — but the flavor profile didn't inspire a reaction.",
       },
       {
         name: "Al Pastor",
-        score: 7.0,
+        score: 7.3,
         isBenchmark: false,
         notes:
           "Solid. Nothing to write home about, and nothing to complain about either. Same story as the asada.",
+      },
+    ],
+  },
+  {
+    id: "el-taconazo",
+    name: "El Taconazo",
+    neighborhood: "North Houston, TX",
+    visited: "2025",
+    pricePerTaco: "$2–3",
+    vibeScore: 8.2,
+    overallScore: 9.1,
+    tacoSize: "Standard street taco size",
+    description:
+      "El Taconazo is undeniably a Houston hidden gem. Located on the north side of Houston in a neighborhood only locals seem to know about. We got there around 8:30 PM and there was a line wrapped around the corner — you could tell this was a standard night for the food truck because they were pumping out tacos like nobody's business. We waited close to 30 minutes, with the line moving fairly quickly. Once we ordered, our 12 tacos were out in about three minutes. El Taconazo was easily the best and most consistent spot across all forms of tacos.",
+    tacos: [
+      {
+        name: "Barbacoa",
+        score: 9.2,
+        isBenchmark: true,
+        notes:
+          "Just as flavorful as the Barbacoa from Cantina Barba — if anything, a little more subtle and a little less sweet. The freshness and quality of ingredients is easily detectable. One of those bites that requires some noise.",
+      },
+      {
+        name: "Trompo",
+        score: 9.5,
+        isBenchmark: false,
+        notes:
+          "The highlight. A deep red from the spicy marinade catches your eye immediately. At first touch you get an explosion of savory flavor, and on the back end a building wave of spice. This taco didn't need any sauce — adding one would only be a distraction.",
+      },
+      {
+        name: "Lengua",
+        score: 8.5,
+        isBenchmark: false,
+        notes:
+          "A pleasant surprise. Never had Lengua (beef tongue) before — what I found was a very light, tender, and decadent meat. The perfect vessel for red and green sauce and a perfect contrast to the heartier flavors of Barbacoa and Trompo.",
+      },
+      {
+        name: "Fajita",
+        score: 7.5,
+        isBenchmark: false,
+        notes:
+          "Shredded steak. The meat wasn't bursting with flavor on its own, but the quality was great — it acts more as a vehicle for the red and green sauces, and it does that job well.",
+      },
+    ],
+  },
+  {
+    id: "el-mapache",
+    name: "El Mapache",
+    neighborhood: "Bellaire, TX",
+    visited: "2025",
+    pricePerTaco: "$2–3",
+    vibeScore: 7.5,
+    overallScore: 8.8,
+    tacoSize: "Standard street taco size",
+    description:
+      "El Mapache is a food truck you'll only find out about by word of mouth. Found in a parking lot just outside Bellaire, it was a unique find. Their specialty is the tripa and the pastor — and both lived up to the reputation. Service was a little slow compared to the other spots we visited, but once the tacos arrived, all was forgiven.",
+    tacos: [
+      {
+        name: "Al Pastor",
+        score: 9.5,
+        isBenchmark: false,
+        notes:
+          "The best pastor we had all night. The pineapple flavor came in strong, which is rare — sometimes you don't get that fresh pineapple pop. Here it was front and center, combining with the smoky pork to create something genuinely beautiful.",
+      },
+      {
+        name: "Tripa",
+        score: 9.5,
+        isBenchmark: false,
+        notes:
+          "Perfectly crispy with a smoky, salty flavor. Tripa can be hit or miss but these were amazing — definitely the most unique taco found so far. A total standout.",
+      },
+      {
+        name: "Barbacoa",
+        score: 8.1,
+        isBenchmark: true,
+        notes:
+          "Good, solid Barbacoa. Not at the level of Cantina Barba or El Taconazo, but well-executed. The tacos that will bring me back are the pastor and tripa — the Barbacoa is just a bonus.",
+      },
+      {
+        name: "Lengua",
+        score: 8.2,
+        isBenchmark: false,
+        notes:
+          "Good. Same story as the Barbacoa — solid and well-made, but the pastor and tripa are the reason you come here.",
       },
     ],
   },
@@ -60,6 +144,18 @@ const LIVE_RANKINGS = [
     spot: "Cantina Barba",
     score: 9.5,
     notes: "Sweet, tangy, smoky — a flavor that pops",
+  },
+  {
+    rank: 2,
+    spot: "El Taconazo",
+    score: 9.2,
+    notes: "Subtle, fresh, and deeply flavorful — just a touch behind the best",
+  },
+  {
+    rank: 3,
+    spot: "El Mapache",
+    score: 8.1,
+    notes: "Solid Barbacoa, but come here for the pastor and tripa",
   },
 ];
 
